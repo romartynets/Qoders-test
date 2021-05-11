@@ -1,0 +1,127 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 26px 0;
+  transition: 0.3s all;
+  z-index: 2;
+
+  &.scrolled {
+    background-color: $c_green;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 240px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin: 0 -30px;
+    transition: 0.3s all;
+
+    @media (max-width: 767px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: $c_green;
+      flex-direction: column;
+      padding: 40px 20px;
+      transform: translateY(-100%);
+      z-index: 10;
+
+      &.opened {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__menu-item {
+    padding: 0 30px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 12px;
+    }
+
+    &.active {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.71;
+      color: $c_white;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__burger {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    z-index: 12;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &.opened {
+      span {
+        &:nth-of-type(1) {
+          top: 9px;
+          transform: rotate(135deg);
+        }
+            
+        &:nth-of-type(2) {
+          opacity: 0;
+          left: -60px;
+        }
+
+        &:nth-of-type(3) {
+          top: 9px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $c_white;
+      border-radius: 4px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 9px;
+      }
+
+      &:nth-of-type(3) {
+        top: 18px;
+      }
+    }
+  }
+}

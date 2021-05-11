@@ -1,0 +1,22 @@
+//vendors
+@import 'vendors/bootstrap';
+@import 'vendors/reset';
+
+//utils
+@import 'utils/variables';
+@import 'utils/global';
+
+//base
+@import 'base/typography';
+
+//components
+@import 'components/buttons';
+
+//modules
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/banner';
+@import 'modules/services';
+@import 'modules/contacts';
+
+

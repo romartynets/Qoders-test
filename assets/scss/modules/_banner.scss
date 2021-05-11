@@ -1,0 +1,145 @@
+.banner{
+  margin-bottom: 118px;
+
+  &__container{
+    height: 100vh;
+    text-align: center;
+  }
+
+  &__title{
+    color: $c_white;
+    margin-bottom: 25px;
+
+  }
+
+  &__description{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.77;
+    letter-spacing: 0.2px;
+    color: $c_white;
+    margin-bottom: 54px;
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
+  }
+
+  .swiper-pagination{
+    bottom: 109px;
+    @media (max-width: 991px) {
+      bottom: 80px;
+    }
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    color: $c_white;
+  }
+
+  .swiper-button-prev{
+    left: 169px;
+    @media (max-width: 1199px) {
+      left: 18px;
+    }
+  }
+
+  .swiper-button-next{
+    right: 184px;
+    @media (max-width: 1199px) {
+      right: 18px;
+    }
+  }
+
+  .swiper-button-disabled{
+    opacity: 0.6;
+  }
+
+  .swiper-pagination-bullet{
+    position: relative;
+    background: $c_white;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 22px;
+      height: 22px;
+      border: 1px solid $c_green;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .swiper-pagination-bullet-active{
+    background: $c_green;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+
+.backgr,
+.backgr_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.backgr_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgr {
+  overflow: hidden;
+}
+
+.backgr_video,
+.backgr iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw; /* 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16/9*100 = 177.77 */
+}
+
+.backgr iframe {
+  opacity: 0;
+}
+
+.backgr iframe.loaded {
+  opacity: 1;
+}
+
+.backgr_content {
+  z-index: 8675309;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 hsla(24, 37%, 69%, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px hsla(24, 37%, 69%, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsla(24, 37%, 69%, 0);
+  }
+}

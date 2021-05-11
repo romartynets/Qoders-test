@@ -1,0 +1,21 @@
+body {
+  overflow-x: hidden;
+  background-color: $c_light;
+}
+
+img,
+input,
+textarea {
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1180px;
+  }
+}

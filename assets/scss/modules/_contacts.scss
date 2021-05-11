@@ -1,0 +1,63 @@
+.contacts {
+    margin-bottom: 190px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 90px;
+      text-align: center;
+    }
+
+    #map {
+      height: 756px;
+      width: 100%;
+
+      @media (max-width: 991px) {
+        height: 400px;
+      }
+    }
+
+    &__navigation {
+      @media (max-width: 991px) {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__navigation-item {
+      padding: 24px 0 23px 57px;
+      max-width: 270px;
+      position: relative;
+      cursor: pointer;
+
+      @media (max-width: 991px) {
+        max-width: unset;
+      }
+      .nav-icon{
+        background-image: url("../images/icons/location.svg" );
+        position: absolute;
+        display: inline-block;
+        top: 25px;
+        left: 14px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &.active {
+        background-color: $c_white;
+        
+        .nav-icon {
+          background-image: url("../images/icons/location-active.svg" );
+        }
+      }
+    }
+
+    &__title {
+      color: $c_green;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      color: $c_grey;
+      margin-bottom: 34px;
+    }
+}
+
+

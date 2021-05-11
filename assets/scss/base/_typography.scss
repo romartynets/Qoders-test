@@ -1,0 +1,63 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $c_grey;
+}
+
+h1,
+.h1 {
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 1.1;
+  @media (max-width: 1199px) {
+    font-size: 80px;
+  }
+  @media (max-width: 991px) {
+    font-size: 62px;
+  }
+  @media (max-width: 767px) {
+    font-size: 42px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.15;
+  @media (max-width: 991px) {
+    font-size: 46px;
+  }
+  @media (max-width: 767px) {
+    font-size: 33px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.34;
+  @media (max-width: 991px) {
+    font-size: 33px;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+h5,
+.h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.56;
+}

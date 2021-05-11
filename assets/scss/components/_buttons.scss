@@ -1,0 +1,54 @@
+.btn-trial{
+    display: inline-block;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #F4FBF6;
+    background: $c_green;
+    border-radius: 27px;
+    padding: 16px 23px;  
+    &:hover{
+        color: $c_white;
+    }
+}
+.btn-more{
+    display: inline-block;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: $c_green;
+    border: 2px solid $c_green;
+    border-radius: 28px;
+    padding: 16px 36px;
+}
+
+.c-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 15px 40px 14px;
+    border: 2px solid;
+    border-radius: 100px;
+    transition: 0.3s all;
+
+    &--transparent {
+        color: $c_green;
+        border-color: $c_green;
+
+        &::after {
+            content: url('../images/icons/btn-arrow.svg');
+            margin-left: 12px;
+        }
+
+        &:hover {
+            color: $c_green;
+            transform: scale(1.1);
+        }
+    }
+}
