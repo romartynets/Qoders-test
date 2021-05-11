@@ -325,7 +325,7 @@ function initMap() {
   marker = new google.maps.Marker({
     position: citiesCoordinates['New York'],
     map,
-    icon: '../images/icons/map-marker.png'
+    icon: './assets/images/icons/map-marker.png'
   });
 }
 
